@@ -34,6 +34,12 @@
 
 Projeto **Mobile** usando api externa que retorna uma lista de personagens da série **Rick and Morty** e alguns detalhes sobre ele.
 
+API REST EXTERNA A SER CONSUMIDA
+
+```sh
+    https://rickandmortyapi.com/api
+```
+
 <br />
 
 <!-- USING -->
