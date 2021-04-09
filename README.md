@@ -62,9 +62,12 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - **[JavaScript](https://www.javascript.com/)**
 - **[TypeScript](https://www.typescriptlang.org/)**
 - **[React - Native](https://reactnative.dev/)**
+- **[Styled Components](https://styled-components.com/)**
 - **[Expo Google Fonts](https://github.com/expo/google-fonts)**
 - **[React Navigation](https://reactnavigation.org/)**
 - **[Axios](https://github.com/axios/axios)**
+- **[i18next](https://www.i18next.com/)**
+- **[React i18next](https://www.i18next.com/)**
 
  \* Veja o arquivo <kbd>[package.json](./package.json)</kbd>
 
