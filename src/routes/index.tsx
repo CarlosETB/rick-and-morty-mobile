@@ -22,7 +22,7 @@ export default function Routes() {
                     component={Home}
                     options={{ header: Header }}
                 />
-                <Screen name="CharacterDetail" component={CharacterDetail} />
+                <Screen name="CharacterDetail" options={{ title: "" }} component={CharacterDetail} />
             </Navigator>
         </NavigationContainer>
     )

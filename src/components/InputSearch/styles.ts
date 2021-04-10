@@ -1,6 +1,6 @@
 // Native
 import styled from 'styled-components/native'
-import { Feather } from '@expo/vector-icons';
+import Feather from 'react-native-vector-icons/Feather';
 
 // Shared
 import { colors } from '~/shared/colors'
@@ -25,7 +25,7 @@ export const TextInput = styled.TextInput`
 `
 
 export const Icon = styled(Feather).attrs({
-    size: 40,
+    size: 30,
     name: "trash",
     color: colors.gray
 })``

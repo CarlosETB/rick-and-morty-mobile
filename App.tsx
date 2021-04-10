@@ -3,11 +3,14 @@ import React from 'react';
 // Native
 import { StatusBar } from "react-native";
 
-
-import { CharactersProvider } from "~/contexts/characters";
+// Contexts
+import { CharactersProvider } from "~/contexts/CharactersContext";
 
 // Routes
 import Routes from '~/routes'
+
+// Locales
+import "~/locales";
 
 // Shared
 import { colors } from '~/shared/colors'

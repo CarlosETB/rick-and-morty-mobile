@@ -1,9 +1,8 @@
 import React from 'react'
 
 // Native
-import { Feather } from '@expo/vector-icons';
 import { TouchableOpacity } from 'react-native'
-
+import { useTranslation } from 'react-i18next';
 // Private
 import { Container, TextInput, Icon } from './styles'
 
@@ -15,12 +14,14 @@ interface LayoutProps {
 const InputSearch: React.FC<LayoutProps> = (props) => {
     const { value, onChangeText } = props
 
+    const { t } = useTranslation("InputSearch");
+
     return (
         <Container>
             <TextInput
                 value={value}
-                placeholder='Pesquisar...'
                 onChangeText={onChangeText}
+                placeholder={t('placeholder')}
             />
 
             <TouchableOpacity onPress={() => onChangeText('')}>

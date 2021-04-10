@@ -19,12 +19,12 @@ export const Image = styled.Image`
     width: 160px;
     height: 160px;
     border-radius: 10px;
-    border: ${colors.gray};
+    border-color: ${colors.gray};
     border-width: ${sizes.hairline}px;
 `
 
 export const Content = styled.View`
-    width: 80%;
+    width: 70%;
 `
 
 export const Title = styled.Text`
@@ -60,4 +60,15 @@ export const TouchableOpacity = styled.TouchableOpacity`
     flex-direction: row;
     justify-content: center;
     align-items: center;
+`
+
+export const ActivityIndicator = styled.ActivityIndicator.attrs({
+    size: "large",
+    color: colors.gray
+})`
+   width: 100%;
+   height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center; 
 `

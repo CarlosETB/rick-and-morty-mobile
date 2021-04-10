@@ -13,6 +13,8 @@ export const Container = styled.View`
     align-items: center;
     padding-right: 5%;
     padding-left: 5%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
     height: ${sizes.height * 0.1 + sizes.statusBar}px;
 `
 
@@ -25,6 +27,7 @@ export const Image = styled.Image.attrs({
 `
 
 export const Text = styled.Text`
-    font-size: 20px;
+    font-size: 25px;
+    font-weight: bold;
     color: ${colors.darkGray};
 `

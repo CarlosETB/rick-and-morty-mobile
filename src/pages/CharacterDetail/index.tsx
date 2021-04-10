@@ -1,10 +1,11 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useEffect } from 'react'
 
 // Native
 import { useNavigation } from '@react-navigation/native'
+import { useTranslation } from "react-i18next"
 
 // Contexts
-import { CharactersContext } from '~/contexts/characters'
+import { CharactersContext } from '~/contexts/CharactersContext'
 
 // Private
 import {
@@ -15,13 +16,17 @@ import {
     Title,
     Text,
     Footer,
-    TouchableOpacity
+    TouchableOpacity,
+    ActivityIndicator
 } from './styles'
 
 const CharacterDetail = () => {
     const navigation = useNavigation()
 
+    const { t } = useTranslation(["Character", "CharacterDetail"]);
+
     const {
+        loading,
         character,
         characters,
         handleGetCharacter,
@@ -39,17 +44,21 @@ const CharacterDetail = () => {
         handleGetAll()
     }, [])
 
+    if (loading) {
+        return <ActivityIndicator />
+    }
+
     return (
         <Container>
             <Image source={{ uri: character?.image }} />
 
             <Line />
-
             <Content>
-                <Text><Title>• ID:</Title> {character?.id}</Text>
-                <Text><Title>• Nome:</Title> {character?.name}</Text>
-                <Text><Title>• Espécie:</Title> {character?.species}</Text>
-                <Text><Title>• Status:</Title> {character?.status}</Text>
+                <Text><Title>• {t('name')}:</Title> {character?.name}</Text>
+                <Text><Title>• {t('status')}:</Title> {character?.status}</Text>
+                <Text><Title>• {t('species')}:</Title> {character?.species}</Text>
+                <Text><Title>• {t('gender')}:</Title> {character?.gender}</Text>
+                <Text><Title>• {t('origin')}:</Title> {character?.origin?.name}</Text>
             </Content>
 
             <Footer>
@@ -58,11 +67,11 @@ const CharacterDetail = () => {
                     onPress={handleGoPrev}
                     style={{ opacity: character?.id === 1 ? 0 : 1 }}
                 >
-                    <Text>Anterior</Text>
+                    <Text>{t('CharacterDetail:prev')}</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity onPress={handleGoToMenu}>
-                    <Text>Menu</Text>
+                    <Text>{t('CharacterDetail:menu')}</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity
@@ -70,7 +79,7 @@ const CharacterDetail = () => {
                     disabled={character?.id === characters.length}
                     style={{ opacity: character?.id === characters.length ? 0 : 1 }}
                 >
-                    <Text>Próximo</Text>
+                    <Text>{t('CharacterDetail:next')}</Text>
                 </TouchableOpacity>
             </Footer>
         </Container>

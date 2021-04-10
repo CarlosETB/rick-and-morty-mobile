@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 
 // Native
 import { useNavigation } from '@react-navigation/native'
+import { useTranslation } from "react-i18next"
 
 // Private
 import {
@@ -13,7 +14,7 @@ import {
     Button,
     Details
 } from './styles'
-import { CharactersContext } from '~/contexts/characters'
+import { CharactersContext } from '~/contexts/CharactersContext'
 
 interface LayoutProps {
     character: {
@@ -29,6 +30,7 @@ const ListItem: React.FC<LayoutProps> = (props) => {
     const { character: { id, name, status, species, image } } = props
 
     const navigation = useNavigation()
+    const { t } = useTranslation(["Character", "ListItem"]);
 
     const {
         setCharacterID
@@ -46,14 +48,14 @@ const ListItem: React.FC<LayoutProps> = (props) => {
             }} />
 
             <Content>
-                <Text><Title>Nome:</Title> {name}</Text>
-                <Text><Title>Espécie:</Title> {status}</Text>
-                <Text><Title>Status:</Title> {species}</Text>
+                <Text><Title>{t('name')}:</Title> {name}</Text>
+                <Text><Title>{t('status')}:</Title> {status}</Text>
+                <Text><Title>{t('species')}:</Title> {species}</Text>
             </Content>
 
             <Button onPress={handleGoToDetail}>
                 <Details>
-                    Detalhes
+                    {t('ListItem:details')}
                 </Details>
             </Button>
         </Container>
