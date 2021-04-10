@@ -2,11 +2,11 @@
 
 <!-- PROJECT SHIELDS -->
 
-[![GitHub issues](https://img.shields.io/github/issues-raw/CarlosETB/rick-and-morty-web.svg)](https://github.com/CarlosETB/rick-and-morty-web/issues)
-[![GitHub last commit](https://img.shields.io/github/last-commit/CarlosETB/rick-and-morty-web.svg)](https://github.com/CarlosETB/rick-and-morty-web/commits/master)
-![GitHub language count](https://img.shields.io/github/languages/count/CarlosETB/rick-and-morty-web?color=%2304D361)
-![GitHub repository size](https://img.shields.io/github/repo-size/CarlosETB/rick-and-morty-web)
-[![License](https://img.shields.io/badge/license-MIT-brightgreen)](https://github.com/CarlosETB/rick-and-morty-web/stargazers)
+[![GitHub issues](https://img.shields.io/github/issues-raw/CarlosETB/rick-and-morty-mobile.svg)](https://github.com/CarlosETB/rick-and-morty-mobile/issues)
+[![GitHub last commit](https://img.shields.io/github/last-commit/CarlosETB/rick-and-morty-mobile.svg)](https://github.com/CarlosETB/rick-and-morty-mobile/commits/master)
+![GitHub language count](https://img.shields.io/github/languages/count/CarlosETB/rick-and-morty-mobile?color=%2304D361)
+![GitHub repository size](https://img.shields.io/github/repo-size/CarlosETB/rick-and-morty-mobile)
+[![License](https://img.shields.io/badge/license-MIT-brightgreen)](https://github.com/CarlosETB/rick-and-morty-mobile/stargazers)
 
 <!-- PROJECT LOGO -->
 
